@@ -1,0 +1,114 @@
+.thanks {
+  margin-top: 76px;
+  min-height: calc(100vh - 76px);
+  position: relative;
+  @include mdc-md {
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+  }
+  @include mdc-sm {
+    margin-top: 40px;
+    min-height: calc(100vh - 40px);
+  }
+
+  &-header {
+    background-color: white;
+  }
+
+  &-img {
+    width: 100%;
+    height: 105vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center center;
+    transform: translate3d(0,0,0);
+    // padding: 5rem 0 8rem;
+    @include mdc-md {
+      height: 110vh;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($blk , .5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }//&-img
+
+  &-wrap {
+    padding: 15vh 0 0;
+    position: relative;
+    z-index: 2;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }//&-wrap
+
+  &-inr {
+    width: 100%;
+    max-width: 510px;
+    margin: 0 auto 0;
+    // position: absolute;
+    // top: 35%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    color: white;
+    text-shadow: 0 3px 6px rgba($blk,.4);
+    @include mdc-sm {
+      max-width: 90%;
+    }
+
+    h2 {
+      font-family: 'pacifico';
+      font-size: 6rem;
+      text-align: center;
+      font-weight: normal;
+      margin: 0 0 4rem;
+      @include mdc-sm {
+        font-size: 4rem;
+      }
+    }
+
+    .mail-msg {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 0 0 4rem;
+      @include mdc-sm {
+        font-size: 1.6rem;
+      }
+    }//.mail-msg
+
+    .thanks-msg {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 0 0 6rem;
+      @include mdc-sm {
+        font-size: 1.4rem;
+        line-height: 1.7;
+      }
+    }//.thanks-msg
+  }
+
+  &-link {
+    text-align: center;
+    a {
+      display: inline-block;
+      color: $blk;
+      text-shadow: none;
+      font-weight: bold;
+      background-color: white;
+      padding: 1rem 4rem;
+      border-radius: 4rem;
+    }
+  }
+
+}//.thanks

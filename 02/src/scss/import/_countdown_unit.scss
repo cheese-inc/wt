@@ -1,0 +1,195 @@
+.countdown-unit {
+  font-family: 'Quicksand', sans-serif;
+  padding: 10rem 0 13rem;
+  text-align: center;
+  color: white;
+  @include mdc-sm {
+    padding: 8rem 0 8rem;
+  }
+
+  .inr {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center center;
+    transform: translate3d(0,0,0);
+    // padding: 5rem 0 8rem;
+    @include mdc-md {
+      height: 110vh;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($blk , .8);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin: 0 0 8rem;
+    @include mdc-md {
+      margin: 0 0 4rem;
+    }
+    @include mdc-sm {
+      font-size: 3rem;
+    }
+  }
+
+  &__date {
+    position: relative;
+    margin: 0 0 8rem;
+    @include mdc-sm {
+      margin: 0 0 5rem;
+    }
+    &:before {
+      content: "";
+      background-image: url(../../img/date_elem.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center,center;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 43rem;
+      height: 15rem;
+      @include mdc-sm {
+        width: 90%;
+      }
+    }
+    time {
+      display: inline-block;
+      font-size: 4rem;
+      position: relative;
+      color: white;
+      @include mdc-sm {
+        font-size: 3rem;
+      }
+    }//time
+  }//__date
+
+
+}//.countdown-unit
+
+.countdowns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  dl {
+    width: 20%;
+    position: relative;
+    @include mdc-md {
+      width: 29%;
+    }
+    @include mdc-sm {
+      width: 33%;
+    }
+    dd {
+      font-size: 10vw;
+      line-height: 1;
+      @media screen and (min-width:1400px){
+        font-size: 13rem;
+      }
+      @include mdc-md {
+        font-size: 18vw;
+      }
+    }//dd
+    dt {
+      font-size: 2rem;
+      line-height: 1;
+      color: $beige;
+      margin: 0 0 0;
+      @include mdc-sm {
+        font-size: 3.6vw;
+      }
+    }//dt
+  }//dl
+
+  .days,.hours,.minutes {
+    &::after {
+      content: "\e911";
+      font-family: 'icomoon';
+      font-size: 5rem;
+      color: $beige;
+      position: absolute;
+      top: 50%;
+      right: -2rem;
+      transform: translateY(-50%);
+      @include mdc-sm {
+        font-size: 8vw;
+        right: -3vw;
+      }
+    }
+  }
+
+  @include mdc-md {
+    .days {
+      width: 100%;
+      margin: 0 0 8rem;
+      position: relative;
+      &::after {
+        display: none;
+      }
+      &::before {
+        content: url(../../img/cd_elem.svg);
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -6rem;
+        transform: translateX(-50%);
+        width: 40%;
+      }
+      dd {
+        font-size: 16vw;
+      }
+      dt {
+        margin: -2% 0 0;
+      }
+
+    }
+  }
+  @include mdc-sm {
+    .days {
+      width: 100%;
+      margin: 0 0 4rem;
+      &::before {
+        bottom: -4rem;
+        width: 90%;
+      }
+      dd {
+        font-size: 24vw;
+      }
+    }
+
+    .hours,.minutes,.seconds {
+      padding: 0;
+      dd {
+        font-size: 19vw;
+      }
+      dt {
+        margin: 0 0 0;
+      }
+    }
+  }
+
+
+}//.countdowns

@@ -1,0 +1,188 @@
+doctype html
+html(lang="ja")
+  head
+    include include/_meta.pug
+  body
+    include include/_loading.pug
+    .wrap
+      include include/_header.pug
+      main
+        section.hero-unit
+          .hero-unit__img(style="background-image: url(img/sample/hero_img.jpg);")
+          .hero-unit__txt
+            span: img(src="img/kotobuki.svg" width="100%" alt="SAVE THE DATE")
+            i.icon-sensu
+            p.date <time>2018.09.02</time>
+        |<!-- /.hero-unit -->
+
+        section.greeting-unit
+          .inr
+            h2.serif ご挨拶
+            .greeting-unit__msg
+              p 謹啓　陽春の候
+              p 皆様にはますますご清祥のこととお慶び申し上げます。<br>このたび　私たちは結婚式を挙げることとなりました。
+              p つきましては　末永くご懇情をいただきたく<br>ささやかですが粗餐を用意させていただきました。
+              p ご多用中まことに恐縮でございますが<br>ぜひご出席賜りますようお願い申し上げます。
+              p 謹白
+              p 平成30年4月吉日
+            .greeting-unit__img
+              .bridegroom
+                .img
+                  span: img(src="img/sample/men_01.jpg" width="100%" alt="新郎")
+              .bride
+                .img
+                  span: img(src="img/sample/women_01.jpg" width="100%" alt="新婦")
+
+        |<!-- /.greeting-unit -->
+
+        section.story-unit#our_story
+          .story-unit__img(style="background-image: url(img/bg_story.jpg);")
+          .inr
+            h2.unit-ttl.serif ストーリー
+            .story-list
+              ul.story-list__list
+                li.story-list__item
+                  .story-list__img
+                    img(src="img/sample/story_img01.jpg" width="100%" alt="")
+                  .story-list__txt
+                    .head
+                      h3: span OUR FIRST MET
+                      time 13 Oct 2011
+                    .body
+                      h4: span サブタイトルサブタイトル
+                      p どこも今とうとうこの学習学という方の以上にいうたまい。できるだけ当時を意味院はとにかくある病気たないでもに起らているながは挨拶ありたうて、そうには出かけたないですた。義務よりなりですのもしばしば前にいかにたならし。<br>
+                        | 多分大森さんに仕事古参そう鑑定がありある教場どんな仲私か意味ににおいてお濫用でなでますば、どういう事実は私か個人評語へ突っついて、向さんのものを衣食のどこがもし
+
+                li.story-list__item
+                  .story-list__img
+                    img(src="img/sample/story_img02.jpg" width="100%" alt="")
+                  .story-list__txt
+                    .head
+                      h3: span OUR FIRST DATING
+                      time 22 Sep 2013
+                    .body
+                      h4: span サブタイトルサブタイトル
+                      p どこも今とうとうこの学習学という方の以上にいうたまい。できるだけ当時を意味院はとにかくある病気たないでもに起らているながは挨拶ありたうて、そうには出かけたないですた。義務よりなりですのもしばしば前にいかにたならし。<br>
+                        | 多分大森さんに仕事古参そう鑑定がありある教場どんな仲私か意味ににおいてお濫用でなでますば、どういう事実は私か個人評語へ突っついて、向さんのものを衣食のどこがもし
+
+                li.story-list__item
+                  .story-list__img
+                    img(src="img/sample/story_img03.jpg" width="100%" alt="")
+                  .story-list__txt
+                    .head
+                      h3: span HOW HE PROPOSED
+                      time 22 Apr 2017
+                    .body
+                      h4: span サブタイトルサブタイトル
+                      p どこも今とうとうこの学習学という方の以上にいうたまい。できるだけ当時を意味院はとにかくある病気たないでもに起らているながは挨拶ありたうて、そうには出かけたないですた。義務よりなりですのもしばしば前にいかにたならし。<br>
+                        | 多分大森さんに仕事古参そう鑑定がありある教場どんな仲私か意味ににおいてお濫用でなでますば、どういう事実は私か個人評語へ突っついて、向さんのものを衣食のどこがもし
+
+                li.story-list__item
+                  .story-list__img
+                    img(src="img/sample/story_img04.jpg" width="100%" alt="")
+                  .story-list__txt
+                    .head
+                      h3: span NOW WE TOGETHER
+                      time 16 July 2018
+                    .body
+                      h4: span サブタイトルサブタイトル
+                      p どこも今とうとうこの学習学という方の以上にいうたまい。できるだけ当時を意味院はとにかくある病気たないでもに起らているながは挨拶ありたうて、そうには出かけたないですた。義務よりなりですのもしばしば前にいかにたならし。<br>
+                        | 多分大森さんに仕事古参そう鑑定がありある教場どんな仲私か意味ににおいてお濫用でなでますば、どういう事実は私か個人評語へ突っついて、向さんのものを衣食のどこがもし
+
+              |<!-- /.story-list__list -->
+            |<!-- /.story-list -->
+        |<!-- /.story-unit -->
+
+        section.countdown-unit
+          .inr
+            h2.countdown-unit__ttl Comming soon…
+            .countdown-unit__date: time 2018.09.02
+            time.countdowns(datetime="2018-09-08")
+
+        section.where-unit#where
+          .inr
+            h2.unit-ttl.serif 会場について
+            .where-cont
+              .where-cont__box
+                .where-cont__img: img(src="img/sample/reception.jpg" width="100%" alt="披露宴会場")
+                .where-cont__detail
+                  .where-cont__head
+                    span.icon: img(src="img/icon_reception.svg" width="100%" height="auto" alt="")
+                    h3.serif 披露宴
+                    span RECEPTION
+                  p 品川プリンスホテルメインタワー　34階ルビー34<br>
+                    | 14:45〜17:15（14:15受付開始)<br>
+                    | ※受付は32階アクアマリン32のお部屋にお越しください<br>
+                    | ※お荷物は2階クロークへお預けください
+                  .where-cont__link
+                    a.btn(href="https://goo.gl/maps/jaCRX96XbqL2" target="_blank")
+                      <i class="icon-map_pin"></i>
+                      span GoogleMapで確認
+              .where-cont__box
+                .where-cont__img: img(src="img/sample/after_party.jpg" width="100%" alt="二次会会場")
+                .where-cont__detail
+                  .where-cont__head
+                    span.icon: img(src="img/icon_after_party.svg" width="100%" height="auto" alt="")
+                    h3.serif 2次会
+                    span AFTER PARTY
+                  p 品川プリンスホテルメインタワー　19階ゴールド19<br>
+                    | 18:30〜20:30（18:00受付開始）<br>
+                    | 男性：7,500円　女性：6,500円
+                  .where-cont__link
+                    a.btn(href="https://goo.gl/maps/jaCRX96XbqL2" target="_blank")
+                      <i class="icon-map_pin"></i>
+                      span GoogleMapで確認
+        |<!-- /.where-unit -->
+
+
+        section.rsvp-form-unit#rspv
+          .rsvp-form-unit__inr
+            .rsvp-form__head
+              h2.unit-ttl.serif 招待状
+              p お手数ではございますが、<br>5月3日までに以下フォームより必要事項をご入力の上<br>送信いただけますようお願い申し上げます。
+
+            .rsvp-form__form
+              fieldset(form="attendance_form")
+                .attendance
+                  label
+                    input(type="radio" name="attendance" value="attend")
+                    span.serif ご出席
+                  label
+                    input(type="radio" name="attendance" value="absence")
+                    span.serif ご欠席
+
+                ul
+                  li
+                    input(type="text" placeholder="お名前" name="name" id="name" value="")
+                  li
+                    input(type="text" placeholder="ふりがな" name="kana" id="kana" value="")
+                  li
+                    input(type="number" placeholder="電話番号" name="tell" id="tell" value="")
+                  li
+                    input(type="text" placeholder="郵便番号" name="postcode" id="postcode" value="")
+                  li
+                    input(type="text" placeholder="住所" name="address" id="address" value="")
+                  li.rff-msg
+                    textarea(name="message" id="message" placeholder="メッセージ" value="")
+                .other-check
+                  label.label-checkbox
+                    input(type="checkbox" name="other_check" value="afterparty")
+                    span.serif 2次会に参加する
+                  label.label-checkbox
+                    input(type="checkbox" name="other_check" value="allergies")
+                    span.serif 食材アレルギー
+                  label.label-checkbox
+                    input(type="checkbox" name="other_check" value="partner")
+                    span.serif 同行者あり
+
+                a.btn(href="javascript:void(0)" data-target="check_mw").modal-open.rsvp-form__btn: span 確認して送信
+              |<!-- /fieldset -->
+
+            |<!-- /.rsvp-form__form -->
+
+          |<!-- /.rsvp-form-unit__inr-->
+        |<!-- /.rsvp-unit -->
+        include include/_check_modal.pug
+
+      |<!-- /main -->
+      include include/_footer.pug

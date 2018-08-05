@@ -1,0 +1,215 @@
+.lock {
+  overflow:hidden;
+}
+
+.check-modal {
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 0 0 3rem;
+    margin: 0 0 5rem;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url(../../img/title_elem02.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center,center;
+      display: block;
+      width: 18%;
+      height: 100%;
+      position: absolute;
+      top: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      @include mdc-sm {
+        width: 30%;
+      }
+    }
+  }//h2
+
+  &__attendance {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 3rem;
+    padding: 0 0 0 2.5rem;
+    position: relative;
+    &::before {
+      display: block;
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      border: 3px solid $pink;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  dl {
+    dt {
+      color: $green;
+      margin: 0 0 0;
+    }
+    dd {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1.7;
+      border-bottom: 1px solid #D0D0D0;
+      padding: 1rem 3%;
+    }
+  }//dl
+
+  &__other-check {
+    margin: 0 0 4rem;
+    @include mdc-sm {
+      margin: 0 0 0;
+    }
+
+    li {
+      display: inline-block;
+      font-size: 1.6rem;
+      font-weight: bold;
+      position: relative;
+      padding: 0 0 0 2.3rem;
+      margin: 0 2rem 0 0;
+      @include mdc-sm {
+        font-size: 1.4rem;
+        margin: 0 1.5rem 1rem 0;
+      }
+      &::before {
+        display: block;
+        font-family: 'icomoon';
+        content: '\e912';
+        font-size: 2rem;
+        color: $green;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }//li
+  }//&__other-check
+
+  &__msg {
+    margin-bottom: 3rem;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mdc-sm {
+      flex-wrap: wrap;
+      div {
+        width: 100%;
+      }
+    }
+
+    a,button {
+      height: auto;
+      padding: 0 7rem;
+      margin: 0 1rem;
+      height: 5rem;
+      line-height: 5rem;
+      border-radius: 3px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      transition: all .3s;
+      @include mdc-sm {
+        width: 100%;
+        margin: 2rem 0 0;
+      }
+    }
+    a {
+      color: $blk;
+      &:hover {
+        background-color: $gray02;
+      }
+    }
+    button {
+      background-color: $green;
+      color: white;
+      &:hover {
+        background-color: lighten( $green, 10% );
+      }
+    }
+  }//&__btns
+}
+
+
+
+
+
+.modal {
+  &-content {
+    overflow:auto;
+    position:relative;
+    display:none;
+    width:56%;
+    min-width: 700px;
+    @include mdc-md {
+      width: 84%;
+      min-width: inherit;
+    }
+    @include mdc-md {
+      width: 96%;
+    }
+  }//&-content
+
+  &-inr {
+    width: 100%;
+    background-color: white;
+    padding: 4rem 6%;
+    margin: 3rem 0;
+    border-radius: 3rem;
+    @include mdc-md {
+      border-radius: 1rem;
+    }
+  }//&-inr
+
+  &-wrap {
+    z-index:2;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    z-index: 100;
+  }//&-wrap
+
+  &-overlay {
+    z-index:1;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120%;
+    background-color:rgba($blk,.7);
+    z-index: 98;
+    &::after,&::before {
+      content: url(../../img/bg_modal.png);
+      display: block;
+      height: 700px;
+      position: fixed;
+      z-index: 99;
+      opacity: .5;
+      // transform: rotate(-45deg);
+    }
+    &::after {
+      bottom: -40%;
+      left: -10%;
+    }
+    &::before {
+      top: -90%;
+      right: -30%;
+    }
+  }//&-overlay
+
+}//.modal

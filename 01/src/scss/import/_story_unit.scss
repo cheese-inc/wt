@@ -1,0 +1,267 @@
+.story-unit {
+  overflow: hidden;
+  padding: 6rem 0;
+  text-shadow: 0 3px 6px rgba($blk,.4);
+  position: relative;
+  z-index: 1;
+  @include mdc-sm {
+    padding: 6rem 0 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center center;
+    transform: translate3d(0,0,0);
+    // padding: 5rem 0 8rem;
+    // backface-visibility: visible;
+    @include mdc-md {
+      height: 110vh;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($blk , .8);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }
+
+  .inr {
+    position: relative;
+    z-index: 3;
+  }
+
+  h2 {
+    color: white;
+    margin: 0 0 4rem;
+    @include mdc-sm {
+      font-size: 6rem;
+      margin: 0 0 1rem;
+    }
+  }
+
+}//.story-unit
+
+
+.story-list {
+  position: relative;
+  &::after,&::before {
+    font-family: 'icomoon';
+    content: "\e909";
+    display: block;
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mdc-sm {
+      display: none;
+    }
+  }
+
+  &::after {
+    top: -2rem;
+  }
+
+  &::before {
+    bottom: -2rem;
+  }
+
+  &__list {
+    color: white;
+    position: relative;
+    padding: 6rem 3%;
+    @include mdc-sm {
+      padding: 6rem 2% 0;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-2px);
+      background-color: white;
+      @include mdc-sm {
+        display: none;
+      }
+    }
+  }//__list
+
+  &__item {
+    padding: 0 0;
+    margin: 8rem 0;
+    position: relative;
+    @include mdc-sm {
+      margin: 0 0 11rem;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-2px);
+      background-color: white;
+      transition: width 200ms 800ms ease;
+      @include mdc-sm {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 0rem;
+      height: 0rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: white;
+      border-radius: 50%;
+      transition: all 200ms 1000ms ease;
+      @include mdc-sm {
+        display: none;
+      }
+    }
+
+    &-inr {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      @include mdc-sm {
+        display: block;
+      }
+    }
+  }
+
+  &__item:nth-child(odd) {
+    &::before {
+      left: 10%;
+    }
+  }
+
+  &__item:nth-child(even) {
+    .story-list__item-inr {
+      flex-direction: row-reverse;
+    }
+    &::before {
+      right: 10%;
+    }
+  }
+
+
+  &__item.fade-on {
+    &::before {
+      width: 40%;
+    }
+    &::after {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }//.fade-on
+
+
+
+  &__img {
+    span {
+      display: inline-block;
+      width: 350px;
+      position: relative;
+      @include mdc-md {
+        width: 230px;
+        margin: 0 3rem;
+      }
+      @include mdc-sm {
+        display: block;
+        width: 76%;
+        margin: 0 auto 5rem;
+      }
+      &::after {
+        content: "";
+        display: block;
+        background-image: url(../../img/story_elem.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 110%;
+        height: 110%;
+        position: absolute;
+        left: -5%;
+        top: -5%;
+      }
+    }
+
+  }//__img
+
+  &__txt {
+    width: 40%;
+    @include mdc-md {
+      width: 45%;
+    }
+    @include mdc-sm {
+      width: 98%;
+      margin: 0 auto;
+    }
+
+    .head {
+      font-family: 'hammersmith';
+      line-height: 1.4;
+      border-bottom: 1px solid $gold;
+      padding: 0 0 .5rem;
+      margin: 0 0 1.5rem;
+      @include mdc-sm {
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 2.2rem;
+        margin: 0 0;
+      }
+      time {
+        display: block;
+        font-size: 2.2rem;
+      }
+    }//.head
+
+    .body {
+      h4 {
+        font-size: 1.8rem;
+        margin: 0 0;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 1.7;
+        @include mdc-sm {
+          font-size: 1.3rem;
+        }
+      }
+    }//.body
+
+    h3,h4 {
+      @include mdc-sm {
+        text-align: center;
+        span {
+          display: inline-block;
+          text-align: left;
+        }
+      }
+    }//h3,h4
+
+  }//&__txt
+
+}//.story-list

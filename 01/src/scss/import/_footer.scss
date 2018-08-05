@@ -1,0 +1,58 @@
+.site-footer {
+  background-color: $blk;
+  color: white;
+  height: 18rem;
+  position: relative;
+  z-index: 2;
+
+  .logo-wrap {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .logo {
+    display: inline-block;
+    position: relative;
+    font-weight: normal;
+    padding: 0 0;
+    margin: 0 0;
+    font-size: 2.3rem;
+
+    .name {
+      font-family: 'hammersmith';
+    }
+
+    i {
+
+    }
+
+    .scripts {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: 'pacifico';
+      font-size: 2.8rem;
+      position: absolute;
+      left: 0;
+      bottom: -2.8rem;
+    }
+
+    .fl-elem {
+      position: absolute;
+      top: 0;
+      // transform: translateY(-50%);
+      font-size: 6rem;
+      color: $gold;
+    }
+    .icon-reef_left {
+      left: -6rem;
+    }
+    .icon-reef_right {
+      right: -6rem;
+    }
+
+  }
+
+}

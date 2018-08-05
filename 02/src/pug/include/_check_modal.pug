@@ -1,0 +1,36 @@
+.modal-content#check_mw
+  .modal-inr.check-modal
+    h2 入力内容をご確認ください
+    .check-modal__cont
+      .check-modal__attendance
+      dl.check-modal__name
+        dt <span class="ja">お名前</span>
+        dd
+      dl.check-modal__kana
+        dt <span class="ja">ふりがな</span>
+        dd
+      dl.check-modal__tell
+        dt <span class="ja">電話番号</span>
+        dd
+      dl.check-modal__postcode
+        dt <span class="ja">郵便番号</span>
+        dd
+      dl.check-modal__address
+        dt <span class="ja">住所</span>
+        dd
+      dl.check-modal__msg
+        dt <span class="ja">メッセージ</span>
+        dd
+
+      ul.check-modal__other-check
+        //- li: span 2次会に参加する
+        //- li: span 食材アレルギー
+        //- li: span 同行者あり
+      .check-modal__btns
+        a.btn(href="javascript:void(0)").modal-close 入力画面に戻る
+        div
+          form(id="attendance_form" action="" method="post")
+            button.btn(type="submit" name="submit") 上記内容を送信
+    |<!-- /.check-modal__cont -->
+  |<!-- /.modal-inr.check-modal -->
+

@@ -1,0 +1,112 @@
+.where-unit {
+  padding: 4rem 0 12rem;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  @include mdc-sm {
+    padding: 4rem 0 1rem;
+  }
+  h2 {
+    margin: 0 0 4rem;
+  }
+}//.where-unit
+
+.where-cont {
+  display: flex;
+  justify-content:space-between;
+  align-items: flex-start;
+  // flex-wrap: wrap;
+  @include mdc-sm {
+    display: block;
+  }
+
+  &__box {
+    padding: 0 3%;
+    text-align: center;
+    @include mdc-md {
+
+    }
+    @include mdc-sm {
+      margin: 0 0 10rem;
+      padding: 0 5%;
+    }
+
+    p {
+      display: inline-block;
+      text-align: left;
+    }
+  }//__box
+
+  &__img {
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url(../../img/ww_bi.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      width: 102%;
+      height: 102%;
+      position: absolute;
+      left: -1%;
+      top: -1%;
+    }
+  }//__img
+
+  &__head {
+    position: relative;
+    border-bottom: 4px double $blk;
+    padding-bottom: .7rem;
+    margin: 0 0 2rem;
+    i {
+      display: inline-block;
+      font-size: 9rem;
+      margin: -6.5rem 0 2rem;
+    }
+
+    h3 {
+      margin: 0 0 .5rem;
+      font-size: 2rem;
+    }
+
+    span {
+      display: block;
+      font-family: 'hammersmith';
+      color: $gold;
+      font-size: 2.2rem;
+    }
+  }//&__head
+
+  p {
+    margin: 0 0 4rem;
+    line-height: 1.7;
+  }
+
+  &__link {
+    a {
+      display: inline-block;
+      background-color: $blk;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding: 1.5rem 5rem;
+      border-radius: 3px;
+      transition: all .3s;
+      &:hover {
+        background-color: lighten( $blk, 10% );
+      }
+
+      i {
+        display: inline-block;
+        margin: 0 3px 0 0;
+        color: $gold;
+        font-size: 2.2rem;
+        vertical-align: sub;
+      }
+      span {
+
+      }
+    }//a
+  }//__link
+
+}//.where-cont

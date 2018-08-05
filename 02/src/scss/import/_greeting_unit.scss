@@ -1,0 +1,146 @@
+.greeting-unit {
+  background-color: $beige;
+  background-image: url(../../img/bg_elem_greeting.svg);
+  background-repeat: no-repeat;
+  background-size: 94% auto;
+  background-position: top center;
+  padding: 8rem 0 8rem;
+  position: relative;
+  z-index: 2;
+  @include mdc-sm {
+    background-size: 300% auto;
+  }
+
+  .inr {
+    position: relative;
+  }
+
+  h2 {
+    position: relative;
+    margin-bottom: 5rem;
+    @include mdc-md {
+      font-size: 5.5rem;
+    }
+    @include mdc-sm {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__msg {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    @include mdc-md {
+      width: 70%;
+      margin: 0 auto 7rem;
+    }
+    @include mdc-sm {
+      width: 96%;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      margin: 0 0 2.5rem;
+      @include mdc-sm {
+        font-size: 1.3rem;
+      }
+    }
+  }//__msg
+
+  &__img {
+    @include mdc-md {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .img {
+      width: 210px;
+      position: relative;
+      margin: 0 0 1rem;
+      @include mdc-md {
+        width: 100%;
+        margin: 0 auto 1rem;
+      }
+
+      span {
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }//.img
+  }//__img
+
+  .bridegroom,.bride {
+    display: inline-block;
+    position: absolute;
+    @include mdc-md {
+      position: relative;
+      width: 25%;
+      margin: 0 3rem;
+    }
+    @include mdc-sm {
+      width: 40%;
+      margin: 0 2rem;
+    }
+    .img {
+      &:after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        width: 120%;
+        height: 120%;
+        position: absolute;
+        left: -10%;
+        top: -10%;
+      }
+    }//.img
+  }
+
+  .bridegroom {
+    left: 4%;
+    top: 5rem;
+    @include mdc-md {
+      left: 0;
+      top: 0;
+    }
+    .img {
+      &:after {
+        background-image: url(../../img/man_elem.svg);
+      }
+    }//.img
+  }//..bridegroom
+
+  .bride {
+    right: 4%;
+    bottom: 5rem;
+    @include mdc-md {
+      right: 0;
+      bottom: inherit;
+      top: 0;
+    }
+    .img {
+      &:after {
+        background-image: url(../../img/woman_elem.svg);
+      }
+    }//.img
+  }//.bride
+
+  .name {
+    text-align: center;
+    margin: 2rem 0 0;
+    span {
+      display: block;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.5rem;
+      line-height: 1;
+      @include mdc-sm {
+        font-size: 1.8rem;
+      }
+    }
+  }//.name
+
+
+}//.greeting-unit

@@ -1,0 +1,17 @@
+.unit-ttl {
+  font-family: 'florence';
+  font-size: 6rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 0 0 0;
+  @include mdc-sm {
+    font-size: 4.5rem;
+  }
+}
+
+.btn {
+  transform: scale(1);
+  &:active {
+    transform: scale(.98);
+  }
+}

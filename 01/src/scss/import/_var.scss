@@ -1,0 +1,64 @@
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Settings color
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+$gray01: #E6E6E6;
+$gray02: #F5F5F5;
+$gray03: #F8F8F8;
+
+$blk: #211F2C;
+$gold: #C4A676;
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Media screen settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*  media-size
+------------------------------------------------------------------ */
+$media-xs: 544px;
+$media-sm: 544px;
+$media-md: 768px;
+$media-lg: 992px;
+$media-xl: 1200px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+/* --------------------------------------------------------------- */
+
+@mixin mdc-xs {
+  @media only screen and (min-width: $media-xs) {
+    @content;
+  }
+}
+
+@mixin mdc-sm {
+  @media only screen and (max-width: $media-sm) {
+    @content;
+  }
+}
+
+@mixin mdc-md {
+  @media only screen and (max-width: $media-md) {
+    @content;
+  }
+}
+
+@mixin mdc-lg {
+  @media only screen and (max-width: $media-lg) {
+    @content;
+  }
+}
+
+@mixin mdc-xl {
+  @media only screen and (max-width: $media-xl) {
+    @content;
+  }
+}

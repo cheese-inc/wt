@@ -1,0 +1,144 @@
+/*==================================================================================
+  flex-box layout
+==================================================================================*/
+
+.flexc-c_c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexc-c_s {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexc-s_s {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flexc-s_e {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.flexc-s_str {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+
+.flexc-c_e {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.flexc-sb_c {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.flexc-sb_s {
+  display: flex;
+  justify-content:space-between;
+  align-items: flex-start;
+}
+
+.flexc-sb_str {
+  display: flex;
+  justify-content:space-between;
+  align-items: stretch;
+}
+
+.flexc-sb_e {
+  display: flex;
+  justify-content:space-between;
+  align-items: flex-end;
+}
+
+.flexc-sb_st {
+  display: flex;
+  justify-content:space-between;
+  align-items: stretch;
+}
+
+.flexc-sa_c {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexc-sa_e {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.flexc-sa_s {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.flexc-w_w {
+  flex-wrap: wrap;
+}
+
+.flexc-fd_rr {
+  flex-direction : row-reverse
+}
+
+
+
+@include mdc-md {
+  .md-flex-reset {
+    display: block;
+    justify-content: flex-start;
+    align-items: initial;
+  }
+}
+
+@include mdc-sm {
+  .sm-flex-reset {
+    display: block;
+    justify-content: flex-start;
+    align-items: initial;
+  }
+}
+
+@include mdc-lg {
+  .lg-flex-reset {
+    display: block;
+    justify-content: flex-start;
+    align-items: initial;
+  }
+}
+
+/*==================================================================================
+
+==================================================================================*/
+
+.column {
+  &-main {
+    width: 100%;
+    max-width: 870px;
+    @include mdc-xl {
+      width: 73%;
+    }
+    @include mdc-md {
+      width: 96%;
+      margin: 0 auto;
+    }
+    @include mdc-sm {
+      width: 98%;
+    }
+  }
+}

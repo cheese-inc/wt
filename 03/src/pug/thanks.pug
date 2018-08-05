@@ -1,0 +1,20 @@
+doctype html
+html(lang="ja")
+  head
+    include include/_meta.pug
+  body
+    include include/_header_thanks.pug
+    main
+      section.thanks
+        .thanks-img(style="background-image: url(img/sample/thanks_img.jpg);")
+        .thanks-wrap
+          .thanks-inr
+            h2 Thank you
+            p.mail-msg メールの送信が完了しました。
+            p.thanks-msg メッセージメッセージメッセージメッセージメッセージメッセージメッセージメッセージメッセージ<br>メッセージメッセージメッセージメッセージメッセージメッセージメッセージメッセージメッセージメッセージメッセージ
+            .thanks-link
+              a.btn(href="#") TOPページへ
+
+
+    |<!-- /main -->
+    include include/_footer.pug

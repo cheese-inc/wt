@@ -1,0 +1,123 @@
+.hero-unit {
+  height: 100vh;
+  background: white;
+  background-image: radial-gradient($beige 20%, transparent 0), radial-gradient($beige 20%, transparent 0);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  position: relative;
+  z-index: 10;
+  @include mdc-md {
+    overflow: hidden;
+    height: 90vh;
+  }
+  @include mdc-sm {
+    height: 100vh;
+  }
+  &:before {
+    display: block;
+    content: "";
+    background-color: $beige;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .inr {
+    height: 100%;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__img {
+    width: 50%;
+    position: absolute;
+    right: 10%;
+    top: 18%;
+    @include mdc-md {
+      width: 90%;
+      right: -15%;
+    }
+    @include mdc-sm {
+      width: 120%;
+      right: -25%;
+      top: 12%;
+    }
+  }//&__img
+
+  &__imginr {
+    position: relative;
+    span {
+      display: block;
+      padding-bottom: 100%;
+      background-size: cover;
+      background-position: center center;
+      border-radius: 50%;
+      &:after {
+        display: block;
+        content: "";
+        background-image: url(../../img/hero_img_elem.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 120%;
+        height: 120%;
+        position: absolute;
+        left: -8%;
+        top: -8%;
+        z-index: 3;
+      }
+    }
+  }//&__imginr
+
+  &__txt {
+    width: 35%;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    // transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    @include mdc-md {
+      width: 45%;
+      left: 0;
+      top: 33%;
+    }
+    @include mdc-sm {
+      width: 45%;
+      left: 0;
+      top: 50%;
+    }
+
+    .date {
+      text-align: center;
+      margin: 1rem 0 0;
+       @include mdc-sm {
+         margin: 0 0 0;
+       }
+
+      time {
+        display: inline-block;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 4rem;
+        font-weight: normal;
+        color: white;
+        line-height: 1;
+        background-image: url(../../img/date_elem02.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        padding: 2rem 5rem;
+        position: relative;
+        @include mdc-sm {
+          font-size: 6vw;
+          padding: 2rem 0;
+          width: 100%;
+        }
+
+      }//span
+    }//.date
+
+  }//__txt
+
+}//.hero-unit

@@ -1,0 +1,157 @@
+.greeting-unit {
+  background-image: url(../../img/bg_elem01.svg);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  padding: 7rem 0 8rem;
+  position: relative;
+  z-index: 2;
+  @include mdc-sm {
+    background-size: 260% auto;
+    background-position: center top;
+    padding: 3rem 0 2rem;
+  }
+
+  .inr {
+    position: relative;
+  }
+
+  h2 {
+    position: relative;
+    padding-bottom: 4rem;
+    margin: 0 0 5rem;
+    background-image: url(../../img/ttl_elem_01.svg);
+    background-repeat: no-repeat;
+    background-size: 35% auto;
+    background-position: center 100%;
+    @include mdc-sm {
+      padding-bottom: 3rem;
+      background-size: 80% auto;
+    }
+  }
+
+  &__msg {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    @include mdc-md {
+      width: 70%;
+      margin: 0 auto 7rem;
+    }
+    @include mdc-sm {
+      width: 96%;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      margin: 0 0 2.5rem;
+      @include mdc-sm {
+        font-size: 1.3rem;
+      }
+    }
+  }//__msg
+
+  &__img {
+    @include mdc-md {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .img {
+      width: 180px;
+      position: relative;
+      margin: 0 0 1rem;
+      @include mdc-md {
+        width: 100%;
+        margin: 0 auto 1rem;
+      }
+
+      span {
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }//.img
+  }//__img
+
+  .bridegroom,.bride {
+    display: inline-block;
+    position: absolute;
+    @include mdc-md {
+      position: relative;
+      width: 25%;
+      margin: 0 3rem;
+    }
+    @include mdc-sm {
+      width: 40%;
+      margin: 0 2rem;
+    }
+    .img {
+      &:after {
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 120%;
+        height: 120%;
+        position: absolute;
+        left: -10%;
+        top: -10%;
+      }
+    }//.img
+  }
+
+  .bridegroom {
+    left: 8%;
+    bottom: 5rem;
+    @include mdc-md {
+      left: inherit;
+      bottom: inherit;
+    }
+    .img {
+      &:after {
+        background-image: url(../../img/man_elem.svg);
+      }
+    }//.img
+  }//..bridegroom
+
+  .bride {
+    right: 8%;
+    bottom: 5rem;
+    @include mdc-md {
+      right: inherit;
+      bottom: inherit;
+    }
+    .img {
+      &:after {
+        background-image: url(../../img/woman_elem.svg);
+      }
+    }//.img
+  }//.bride
+
+  .name {
+    text-align: center;
+    margin: 0 0;
+    i {
+      color: $gold;
+      font-size: 6rem;
+      @include mdc-sm {
+        font-size: 5rem;
+      }
+    }
+    span {
+      display: block;
+      font-family: 'hammersmith';
+      font-size: 2rem;
+      line-height: 1;
+      @include mdc-sm {
+        font-size: 1.8rem;
+      }
+    }
+  }//.name
+
+
+}//.greeting-unit
