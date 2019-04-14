@@ -218,118 +218,97 @@
               <p>お手数ではございますが、<br>5月15日までに以下フォームより必要事項をご入力の上<br>送信いただけますようお願い申し上げます。</p>
             </div>
             <div class="rsvp-form__form">
-              <fieldset form="attendance_form">
-                <div class="attendance">
-                  <label>
-                    <input type="radio" name="attendance" value="attend"><span>ご出席</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="attendance" value="absence"><span>ご欠席</span>
-                  </label>
-                </div>
-                <dl>
-                  <dt>
-                    <label for="name"><span class="ja">お名前</span> / <span class="en">Name</span></label>
-                  </dt>
-                  <dd>
-                    <input type="text" placeholder="（例）山田 太郎" name="name" id="name" value="">
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>
-                    <label for="name"><span class="ja">ふりがな</span> / <span class="en">Kana</span></label>
-                  </dt>
-                  <dd>
-                    <input type="text" placeholder="（例）やまだ たろう" name="kana" id="kana" value="">
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>
-                    <label for="tell"><span class="ja">電話番号</span> / <span class="en">Phone number</span></label>
-                  </dt>
-                  <dd>
-                    <input type="number" placeholder="090-0000-0000" name="tell" id="tell" value="">
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>
-                    <label for="postcode"><span class="ja">郵便番号</span> / <span class="en">Postcode</span></label>
-                  </dt>
-                  <dd>
-                    <input type="text" placeholder="（例）0390611" name="postcode" id="postcode" value="">
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>
-                    <label for="address"><span class="ja">住所</span> / <span class="en">Address</span></label>
-                  </dt>
-                  <dd>
-                    <input type="text" placeholder="（例）東京都港区高輪4-10-30" name="address" id="address" value="">
-                  </dd>
-                </dl>
-                <dl class="rff-msg">
-                  <dt>
-                    <label for="message"><span class="ja">メッセージ</span> / <span class="en">Message</span></label>
-                  </dt>
-                  <dd>
-                    <textarea name="message" id="message" value=""></textarea>
-                  </dd>
-                </dl>
-                <div class="other-check">
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="other_check" value="afterparty"><span>2次会に参加する</span>
-                  </label>
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="other_check" value="allergies"><span>食材アレルギー</span>
-                  </label>
-                  <label class="label-checkbox">
-                    <input type="checkbox" name="other_check" value="partner"><span>同行者あり</span>
-                  </label>
-                </div><a class="btn modal-open rsvp-form__btn" href="javascript:void(0)" data-target="check_mw"><span>確認して送信</span></a>
-              </fieldset><!-- /fieldset -->
+              <form id="attendance_form" name="attendance_form" action="https://api.formbucket.com/f/buk_2mQcTZHJdFXuOGfPjdf5Hgle" method="post">
+                <fieldset form="attendance_form">
+                  <div class="attendance">
+                    <label>
+                      <input type="radio" name="attendance" value="attend" required><span>ご出席</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="attendance" value="absence" required><span>ご欠席</span>
+                    </label>
+                  </div>
+                  <dl>
+                    <dt>
+                      <label for="name"><span class="ja">お名前</span> / <span class="en">Name</span></label>
+                    </dt>
+                    <dd>
+                      <input type="text" placeholder="（例）山田 太郎" name="name" id="name" value="" required>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <label for="name"><span class="ja">ふりがな</span> / <span class="en">Kana</span></label>
+                    </dt>
+                    <dd>
+                      <input type="text" placeholder="（例）やまだ たろう" name="kana" id="kana" value="">
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <label for="tell"><span class="ja">電話番号</span> / <span class="en">Phone number</span></label>
+                    </dt>
+                    <dd>
+                      <input type="number" placeholder="090-0000-0000" name="tell" id="tell" value="">
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <label for="postcode"><span class="ja">郵便番号</span> / <span class="en">Postcode</span></label>
+                    </dt>
+                    <dd>
+                      <input type="text" placeholder="（例）0390611" name="postcode" id="postcode" value="" required>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <label for="address"><span class="ja">住所</span> / <span class="en">Address</span></label>
+                    </dt>
+                    <dd>
+                      <input type="text" placeholder="（例）東京都港区高輪4-10-30" name="address" id="address" value="" required>
+                    </dd>
+                  </dl>
+                  <dl class="rff-msg">
+                    <dt>
+                      <label for="message"><span class="ja">メッセージ</span> / <span class="en">Message</span></label>
+                    </dt>
+                    <dd>
+                      <textarea name="message" id="message" value=""></textarea>
+                    </dd>
+                  </dl>
+                  <div class="other-check">
+                    <label class="label-checkbox">
+                      <input type="checkbox" name="afterParty" value="yes"><span>2次会に参加する</span>
+                    </label>
+                    <label class="label-checkbox">
+                      <input type="checkbox" name="allergies" value="yes"><span>食材アレルギー</span>
+                    </label>
+                    <label class="label-checkbox">
+                      <input type="checkbox" name="companion" value="yes"><span>同行者あり</span>
+                    </label>
+                  </div>
+                  <dl id="allergies-message" class="hidden rff-msg">
+                    <dt>
+                      <label for="allergies-message"><span class="ja">アレルギーについて</span> / <span class="en">About Allergies</span></label>
+                    </dt>
+                    <dd>
+                      <textarea name="allergies-message" value="" placeholder="食材アレルギーをお持ちの場合はアレルギーの種類をご入力ください。"></textarea>
+                    </dd>
+                  </dl>
+                  <dl id="companion-message" class="hidden rff-msg">
+                    <dt>
+                      <label for="companion-message"><span class="ja">同行者</span> / <span class="en">Companion</span></label>
+                    </dt>
+                    <dd>
+                      <textarea name="companion-message" value="" placeholder="お連れ様がいらっしゃる方は、お名前とふりがなをご入力ください。&#13;&#10;お子様の場合、ご年齢と、お席はお子様用・大人用かご入力ください。"></textarea>
+                    </dd>
+                  </dl>
+                  <a class="btn rsvp-form__btn" href="javascript:attendance_form.submit()"><span>送信</span></a>
+                </fieldset><!-- /fieldset -->
+              </form>
             </div><!-- /.rsvp-form__form -->
           </div><!-- /.rsvp-form-unit__inr-->
         </section><!-- /.rsvp-unit -->
-        <div class="modal-content" id="check_mw">
-          <div class="modal-inr check-modal">
-            <h2>入力内容をご確認ください</h2>
-            <div class="check-modal__cont">
-              <div class="check-modal__attendance"></div>
-              <dl class="check-modal__name">
-                <dt><span class="ja">お名前</span> / <span class="en">Name</span></dt>
-                <dd></dd>
-              </dl>
-              <dl class="check-modal__kana">
-                <dt><span class="ja">ふりがな</span> / <span class="en">Kana</span></dt>
-                <dd></dd>
-              </dl>
-              <dl class="check-modal__tell">
-                <dt><span class="ja">電話番号</span> / <span class="en">Phone number</span></dt>
-                <dd></dd>
-              </dl>
-              <dl class="check-modal__postcode">
-                <dt><span class="ja">郵便番号</span> / <span class="en">Postcode</span></dt>
-                <dd></dd>
-              </dl>
-              <dl class="check-modal__address">
-                <dt><span class="ja">住所</span> / <span class="en">Address</span></dt>
-                <dd></dd>
-              </dl>
-              <dl class="check-modal__msg">
-                <dt><span class="ja">メッセージ</span> / <span class="en">Message</span></dt>
-                <dd></dd>
-              </dl>
-              <ul class="check-modal__other-check"></ul>
-              <div class="check-modal__btns"><a class="btn modal-close" href="javascript:void(0)">入力画面に戻る</a>
-                <div>
-                  <form id="attendance_form" action="thanks.html" method="post">
-                    <button class="btn" type="submit" name="submit">上記内容を送信</button>
-                  </form>
-                </div>
-              </div>
-            </div><!-- /.check-modal__cont -->
-          </div><!-- /.modal-inr.check-modal -->
-        </div>
       </main><!-- /main -->
       <footer class="site-footer">
         <div class="logo-wrap">
