@@ -2020,7 +2020,8 @@ select {
 
 @media only screen and (max-width: 544px) {
     .story-list__txt .body p {
-        font-size: 1.3rem
+        font-size: 1.3rem;
+        text-align: center;
     }
 }
 
